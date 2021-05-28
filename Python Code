@@ -345,7 +345,7 @@ ax1.set_title("Minimum Variance Portfolio Returns")
 plt.show(); 
 
 mean_annual_ret_min_var = port_ret_min_var.mean()*252 #compute the mean annual return of the portfolio
-volatility_min_var = port_ret_min_var.std() #compute the annual volatility of the portfolio
+volatility_min_var = port_ret_min_var.std()*np.sqrt(252) #compute the annual volatility of the portfolio
 value_at_risk_min_var = mean_annual_ret_min_var - 1.96*volatility_min_var #compute the annual 95% VaR
 
 
@@ -370,7 +370,7 @@ ax1.set_title("Maximum Sharpe Ratio Portfolio Returns")
 plt.show(); 
 
 mean_annual_ret_max_sr = port_ret_max_sr.mean()*252 #compute the mean annual return of the portfolio
-volatility_max_sr = port_ret_max_sr.std() #compute the annual volatility of the portfolio
+volatility_max_sr = port_ret_max_sr.std()*np.sqrt(252) #compute the annual volatility of the portfolio
 value_at_risk_max_sr = mean_annual_ret_max_sr - 1.96*volatility_max_sr #compute the annual 95% VaR
 
 
@@ -395,7 +395,7 @@ ax1.set_title("Equally Weighted Portfolio Returns")
 plt.show(); 
 
 mean_annual_ret_eq_weights = port_ret_eq_weights.mean()*252 #compute the mean annual return of the portfolio
-volatility_eq_weights = port_ret_eq_weights.std() #compute the annual volatility of the portfolio
+volatility_eq_weights = port_ret_eq_weights.std()*np.sqrt(252) #compute the annual volatility of the portfolio
 value_at_risk_eq_weights = mean_annual_ret_eq_weights - 1.96*volatility_eq_weights #compute the annual 95% VaR
 
 
