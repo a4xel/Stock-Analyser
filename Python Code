@@ -7,6 +7,8 @@ import pandas as pd
 import numpy as np
 import pandas_datareader as web
 import matplotlib.pyplot as plt
+from IPython.display import display
+
 
 # Ask for the number of stocks the user wants to preselect
 number = None
